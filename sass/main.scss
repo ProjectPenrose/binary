@@ -1,0 +1,16 @@
+$enable-responsive-font-sizes: true;
+$enable-gradients: true;
+$enable-shadows: true;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+html, body {
+  height: 100%;
+}
+
+// [data-bs-theme=dark] {
+// }
+
+// [data-bs-theme=light] {
+// }
+
