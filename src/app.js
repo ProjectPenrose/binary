@@ -16,7 +16,7 @@ app.engine("html", ejs);
 app.set("views", path.join(__dirname, "../static/views"));
 app.set("view engine", "html");
 
-const { BASE_URL = "http://localhost:3000" } = process.env;
+const { BASE_URL = "http://localhost:3000", GA_ID = null } = process.env;
 console.log(BASE_URL);
 app.use((req, res, next) => {
   const trustedDomains = [];
@@ -31,6 +31,7 @@ app.use((req, res, next) => {
     cssUrl: `${BASE_URL}/assets/css`,
     jsUrl: `${BASE_URL}/assets/js`,
     time: Date.now(),
+    gaId: GA_ID,
   }
   next();
 });
