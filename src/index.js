@@ -1,4 +1,4 @@
-const dotenv = require("dotenv");
+require("dotenv").config({ path: "./.env" });
 
 const { NODE_ENV = "development", DEV_HOST = "localhost", PORT = 3000 } = process.env;
 
