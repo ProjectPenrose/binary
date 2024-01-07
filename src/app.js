@@ -17,6 +17,7 @@ app.set("views", path.join(__dirname, "../static/views"));
 app.set("view engine", "html");
 
 const { BASE_URL = "http://localhost:3000" } = process.env;
+console.log(BASE_URL);
 app.use((req, res, next) => {
   const trustedDomains = [];
   if (trustedDomains.includes(req.headers.origin)) {
